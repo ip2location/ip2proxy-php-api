@@ -10,7 +10,11 @@ To begin, an API key is required for this module to function. Find further infor
 Add the following to your composer.json file:
 
 ```
-require_once 'class.IP2ProxyAPI.php';
+{
+  "require": {
+	"ip2location/ip2proxy-php-api": "1.*"
+  }
+}
 ```
 
 ## Usage

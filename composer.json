@@ -1,0 +1,22 @@
+{
+	"name": "ip2location/ip2proxy-php-api",
+	"type": "library",
+	"description": "PHP module to check if an IP address was being used as open proxy, web proxy, VPN anonymizer and TOR exits via IP2Proxy API.",
+	"keywords": ["geolocation", "detect vpn", "ip to vpn", "ip2proxy", "tor exits", "open proxy", "web proxy"],
+	"homepage": "http://www.ip2location.com/",
+	"license": "LGPL-3.0",
+	"authors": [
+		{
+			"name": "IP2Location",
+			"email": "support@ip2location.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3"
+	},
+	"autoload": {
+		"classmap": [
+			"class.IP2ProxyAPI.php"
+		]
+	}
+}
