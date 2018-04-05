@@ -91,3 +91,15 @@ class IP2ProxyAPI
 ```
 
 
+## Response message
+
+| Name | Description |
+| ---------- | ------------- |
+| response | OK if success, otherwise failed. |
+| countryCode | 2 digits country code. |
+| countryName | Country name. |
+| regionName | Region or state name. |
+| cityName | City name. |
+| isp | The service provider name. |
+| isProxy | YES if the IP is a Proxy. NO if the IP is not a proxy. DCH if the IP belongs to Hosting Provider, Data Center or Content Delivery Network. Note: DCH is only available for PX2, PX3 and PX4 query |
+| proxyType | The type of proxy service. |
