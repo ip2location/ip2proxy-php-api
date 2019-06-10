@@ -1,23 +1,20 @@
 <?php
 
-require_once 'class.IP2ProxyAPI.php';
+require 'class.IP2ProxyAPI.php';
 
-$apiKey = 'YOUR_API_KEY';
-$ip = '8.8.8.8';
+$api = new IP2ProxyAPI('YOUR_API_KEY');
 
-$ipx = new IP2ProxyAPI($apiKey, false);
-
-if (!$ipx->query($ip)) {
-	die('ERROR');
+if ($api->query('1.2.3.4')) {
+	echo '<strong>Country Code</strong>: ' . $api->countryCode . '<br>';
+	echo '<strong>Country Name</strong>: ' . $api->countryName . '<br>';
+	echo '<strong>Region</strong>: ' . $api->regionName . '<br>';
+	echo '<strong>City</strong>: ' . $api->cityName . '<br>';
+	echo '<strong>ISP</strong>: ' . $api->isp . '<br>';
+	echo '<strong>Domain</strong>: ' . $api->domain . '<br>';
+	echo '<strong>Usage Type</strong>: ' . $api->usageType . '<br>';
+	echo '<strong>ASN</strong>: ' . $api->asn . '<br>';
+	echo '<strong>AS</strong>: ' . $api->as . '<br>';
+	echo '<strong>Last Seen</strong>: ' . $api->lastSeen . '<br>';
+	echo '<strong>Proxy Type</strong>: ' . $api->proxyType . '<br>';
+	echo '<strong>Is Proxy</strong>: ' . $api->isProxy . '<br>';
 }
-
-echo '<pre>';
-echo 'Response     : ' . $ipx->response . "\n";
-echo 'Country Code : ' . $ipx->countryCode . "\n";
-echo 'Country Name : ' . $ipx->countryName . "\n";
-echo 'Region Name  : ' . $ipx->regionName . "\n";
-echo 'City Name    : ' . $ipx->cityName . "\n";
-echo 'ISP          : ' . $ipx->isp . "\n";
-echo 'Proxy Type   : ' . $ipx->proxyType . "\n";
-echo 'Is Proxy     : ' . $ipx->isProxy . "\n";
-echo '</pre>';
