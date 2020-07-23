@@ -2,7 +2,7 @@
 
 require 'class.IP2ProxyAPI.php';
 
-$api = new IP2ProxyAPI('YOUR_API_KEY');
+$api = new IP2ProxyAPI('YOUR_API_KEY', 'PX10');
 
 if ($api->query('1.2.3.4')) {
 	echo '<strong>Country Code</strong>: ' . $api->countryCode . '<br>';
@@ -17,4 +17,5 @@ if ($api->query('1.2.3.4')) {
 	echo '<strong>Last Seen</strong>: ' . $api->lastSeen . '<br>';
 	echo '<strong>Proxy Type</strong>: ' . $api->proxyType . '<br>';
 	echo '<strong>Is Proxy</strong>: ' . $api->isProxy . '<br>';
+	echo '<strong>Threat</strong>: ' . $api->threat . '<br>';
 }

@@ -26,7 +26,8 @@ Add the following to your composer.json file:
 
 require 'class.IP2ProxyAPI.php';
 
-$api = new IP2ProxyAPI('YOUR_API_KEY');
+// Second parameter supports PX1 to PX10
+$api = new IP2ProxyAPI('YOUR_API_KEY', 'PX8');
 
 if ($api->query('1.2.3.4')) {
 	echo '<strong>Country Code</strong>: ' . $api->countryCode . '<br>';
@@ -41,6 +42,7 @@ if ($api->query('1.2.3.4')) {
 	echo '<strong>Last Seen</strong>: ' . $api->lastSeen . '<br>';
 	echo '<strong>Proxy Type</strong>: ' . $api->proxyType . '<br>';
 	echo '<strong>Is Proxy</strong>: ' . $api->isProxy . '<br>';
+    echo '<strong>Threat</strong>: ' . $api->threat . '<br>';
 }
 ```
 
@@ -62,6 +64,7 @@ if ($api->query('1.2.3.4')) {
 | asn | Autonomous system number (ASN).                              |
 | as | Autonomous system (AS) name. |
 | lastSeen | Proxy last seen in days. |
+| threat | Security threat reported. |
 
 
 
