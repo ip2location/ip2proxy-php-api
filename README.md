@@ -2,7 +2,7 @@
 
 > This project has been merged into [IP2Proxy-PHP-Module](https://github.com/ip2location/ip2proxy-php). We will  no longer maintain and support this project. Please visit  [IP2Proxy-PHP-Module](https://github.com/ip2location/ip2proxy-php) for latest updates or enhancements.
 
-This module allows user to query an IP address if it was being used as open proxy, web proxy, VPN anonymizer and TOR exits. It lookup the proxy IP address using **IP2Proxy API**. 
+This module allows user to query an IP address if it was being used as VPN anonymizer, open proxies, web proxies, Tor exits, data center, web hosting (DCH) range, search engine robots (SES), residential proxies (RES), consumer privacy networks (CPN), and enterprise private networks (EPN). It lookup the proxy IP address using **IP2Proxy API**. 
 
 
 ## Getting Started
